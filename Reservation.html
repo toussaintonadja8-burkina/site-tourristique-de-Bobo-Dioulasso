@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Réservation d'Hôtel - Bobo-Dioulasso</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+    
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+    
+        main .hotel {
+            background-color: #4a5568;
+            color: white;
+            height: 120px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        main .hotel h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+    
+        .conteneur-principal {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+    
+        .colonne-gauche {
+            flex: 1.2; 
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        
+        .colonne-droite {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        
+        .colonne-gauche h2 {
+            color: #2d3748;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .groupe-champ {
+            margin-bottom: 18px;
+        }
+
+        .ligne-champs {
+            display: flex;
+            gap: 15px;
+        }
+
+        .ligne-champs .groupe-champ {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* --- Styles des Cartes d'Infos (Droite) --- */
+        .carte-info {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .carte-info h3 {
+            margin-top: 0;
+            color: #2d3748;
+            font-size: 1.2rem;
+            border-left: 4px solid #4CAF50;
+            padding-left: 10px;
+        }
+
+        .carte-info ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .carte-info ul li {
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+
+        .carte-info strong {
+            color: #2d3748;
+        }
+
+
+        @media (max-width: 768px) {
+            .conteneur-principal {
+                flex-direction: column; 
+            }
+            .colonne-gauche, .colonne-droite {
+                flex: none;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+   <div class="entetegauche">
+      
+      <img src="image/logo.jpeg" alt="Logo de Bobo-Dioulasso"> 
+      
+      <div class="entetetitres">
+        <h1>BOBO-DIOULASSO</h1>
+        <p>L'âme culturelle de Sya — Hauts-Bassins, Burkina Faso</p>
+      </div>
+    </div>
+
+    
+    <div class="entetedroite">
+      <span> Région : Hauts-Bassins</span>
+      <span> Urgence Tourisme : +226 20 97 XX XX</span>
+      <span>🇧🇫 Bienvenue / Ani baraji !</span>
+    </div>
+</header>
+
+<nav>
+    <a href="index3.html">Accueil</a>
+    <a href="Patrimoine.html">Patrimoine</a>
+    <a href="Reservation.html" class="actif">Réservation d'hôtel</a>
+    <a href="galerie.html">Galerie</a>
+</nav>
+
+<main>
+    <div class="hotel">
+        <h1>RÉSERVATION D'HÔTEL</h1>
+    </div>
+    
+
+    <div class="conteneur-principal">
+        
+        
+        <section class="colonne-gauche">
+            <form action="" method="post">
+                <h2>FORMULAIRE DE RÉSERVATION</h2>
+                
+                <div class="ligne-champs">
+                    <div class="groupe-champ">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Ex: Traoré">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="Ex: Amadou">
+                    </div>
+                </div>
+
+                <div class="ligne-champs">
+                    <div class="groupe-champ">
+                        <label for="date_naissance">Date de naissance :</label>
+                        <input type="date" id="date_naissance" name="date_naissance" required>
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="nationalite">Nationalité :</label>
+                        <input type="text" id="nationalite" name="nationalite" required placeholder="Ex: Burkinabè">
+                    </div>
+                </div>
+
+                <div class="ligne-champs">
+                    <div class="groupe-champ">
+                        <label for="numero_telephone">Téléphone :</label>
+                        <input type="tel" id="numero_telephone" name="numero_telephone" placeholder="Ex: +226 20 XX XX XX">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required placeholder="Ex: contact@domaine.com">
+                    </div>
+                </div>
+
+                <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 20px 0;">
+
+                <div class="ligne-champs">
+                    <div class="groupe-champ">
+                        <label for="date_arrivee">Date d'arrivée :</label>
+                        <input type="date" id="date_arrivee" name="date_arrivee" required>
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="date_depart">Date de départ :</label>
+                        <input type="date" id="date_depart" name="date_depart" required>
+                    </div>
+                </div>
+
+                <div class="ligne-champs">
+                    <div class="groupe-champ">
+                        <label for="nombre_personnes">Nombre de personnes :</label>
+                        <input type="number" id="nombre_personnes" name="nombre_personnes" min="1" max="10" value="1">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="type_chambre">Type de chambre :</label>
+                        <select id="type_chambre" name="type_chambre">
+                            <option value="Simple">Chambre Simple</option>
+                            <option value="Double" selected>Chambre Double</option>
+                            <option value="Twin">Chambre Twin</option>
+                            <option value="Triple">Chambre Triple</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="groupe-champ">
+                    <button type="submit">Confirmer la réservation</button>
+                </div>
+            </form>
+        </section>
+
+        
+        <aside class="colonnedroite">
+            
+            
+            <div class="carte-info">
+                <h3>À découvrir à Bobo-Dioulasso</h3>
+                <p>Profitez de votre séjour dans la ville de Sya pour explorer ses merveilles culturelles :</p>
+                <ul>
+                    <li><strong>La Grande Mosquée de Dioulassoba :</strong> Un chef-d'œuvre architecturale en banco datant du 19e siècle.</li>
+                    <li><strong>Le Vieux Quartier :</strong> Promenez-vous au cœur des traditions et de l'artisanat local.</li>
+                    <li><strong>La Guinguette :</strong> Un havre de fraîcheur naturelle idéal pour se détendre.</li>
+                </ul>
+            </div>
+
+            
+            <div class="carte-info">
+                <h3>Informations Pratiques</h3>
+                <ul>
+                    <li><strong>Monnaie :</strong> Franc CFA (XOF)</li>
+                    <li><strong>Heure d'arrivée :</strong> À partir de 14h00</li>
+                    <li><strong>Heure de départ :</strong> Avant 12h00</li>
+                    <li><strong>Besoin d'aide ?</strong> Notre équipe touristique est disponible pour vous guider.</li>
+                </ul>
+            </div>
+            
+        </aside>
+
+    </div>
+</main>
+
+<footer>
+    
+  <div class="footercontenu">
+    
+    
+    <div class="footercolonne">
+      <h4>Ville de Sya</h4>
+      <p>Découvrez Bobo-Dioulasso, une ville riche de traditions, 
+        d'artisanat et d'une hospitalité légendaire au cœur des Hauts-Bassins.</p>
+    </div>
+
+  
+    <div class="footercolonne">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index3.html">Accueil</a></li>
+        <li><a href="Patrimoine.html">Patrimoine</a></li>
+        <li><a href="Reservation.html">Réservation d'hôtel</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+      </ul>
+    </div>
+
+   
+    <div class="footercolonne">
+      <h4>Contact Utiles</h4>
+      <ul>
+        <li> Mairie de Bobo-Dioulasso</li>
+        <li>Bureau du Tourisme : +226 20 XX XX XX</li>
+        <li> contact@bobo-tourisme.bf</li>
+        <li> Sécours de police : 17</li>
+
+<li>Événement : Fier d'accueillir la Semaine Nationale de la Culture (SNC).</li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+  <div class="footerbas">
+    <p>© 2026 Site touristique de Bobo-Dioulasso, Burkina Faso. Tous droits réservés.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bobo-Dioulasso - Ville de Sya</title>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298); 
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .entetegauche {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img {
+      width: 70px; 
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%; 
+      border: 3px solid #ffcc00; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .entetetitres h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      color: #ffffff;
+    }
+
+    .entetetitres p {
+      margin: 5px 0 0 0;
+      font-size: 1rem;
+      color: #ffcc00; 
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    
+    .entetegauche {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .entetedroite span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    
+    main {
+      display: flex;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .articl {
+      flex: 1.5;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .articl h2 {
+      color: #1e3c72;
+      margin-top: 0;
+      font-size: 1.8rem;
+      border-bottom: 3px solid #ffcc00;
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
+    .articl h3 {
+      color: #555;
+      margin-top: 20px;
+    }
+
+    .articl p {
+      line-height: 1.7;
+      color: #4a5568;
+      text-align: justify;
+    }
+
+  
+    aside {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bloc {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid #1e3c72;
+    }
+
+    .bloc h3 {
+      margin-top: 0;
+      color: #1e3c72;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .bloc p {
+      margin: 10px 0;
+      font-size: 0.95rem;
+      color: #4a5568;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    
+    .badge {
+      display: inline-block;
+      background-color: #e2e8f0;
+      color: #4a5568;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .badge:hover {
+      background-color: #ffcc00;
+      color: #1e3c72;
+      transform: translateY(-2px);
+    }
+
+    .bouton {
+      display: block;
+      text-align: center;
+      background: #045575;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.2s;
+    }
+
+    .bouton:hover {
+      background: #add3f1;
+    }
+
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+      }
+      .entetegauche {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .entetedroite {
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      main {
+        flex-direction: column;
+        padding: 20px 15px;
+      }
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  
+  <header>
+    <div class="entete-gauche">
+      
+      <img src="image/logo.jpeg" alt="Logo de Bobo-Dioulasso"> 
+      
+      <div class="entetetitres">
+        <h1>BOBO-DIOULASSO</h1>
+        <p>L'âme culturelle de Sya — Hauts-Bassins, Burkina Faso</p>
+      </div>
+    </div>
+
+  
+    <div class="entetedroite">
+      <span> Région : Hauts-Bassins</span>
+      <span> Urgence Tourisme : +226 20 97 XX XX</span>
+      <span>🇧🇫 Bienvenue / Aw dan sin !</span>
+    </div>
+  </header>
+
+  
+  <nav>
+    <a href="index3.html" class="actif">Accueil</a>
+    <a href="Patrimoine.html">Patrimoine</a>
+    <a href="Reservation.html">Réservation d'hôtel</a>
+    <a href="galerie.html">Galerie</a>
+  </nav>
+
+  
+  <main>
+
+    <section class="articl">
+      <h2>Bienvenue à Bobo-Dioulasso</h2>
+      <h3>Description de la cité de Sya</h3>
+      <p>
+        Bobo-Dioulasso est la deuxième ville du Burkina Faso et le cœur culturel de 
+        la région des Hauts-Bassins. Fondée autour du noyau historique de Sya, elle 
+        s'est développée grâce au commerce, à l'artisanat et à une tradition musicale 
+        riche qui rythme la vie quotidienne.
+      </p>
+      <p>
+        La ville est renommée pour ses marchés vibrants — en particulier le Grand Marché — où 
+        se mêlent tissus, poteries et produits locaux. Les artisans y exposent un savoir-faire
+         transmis de génération en génération.
+      </p>
+      <p>
+        Sur le plan architectural, Bobo-Dioulasso abrite des monuments emblématiques,
+         comme la Grande Mosquée et des maisons traditionnelles ornées de motifs locaux. 
+         Les festivals de musique et de danse attirent chaque année des artistes nationaux et internationaux.
+      </p>
+      <p>
+        Aujourd'hui, la ville reste un centre économique dynamique tout en conservant ses traditions:
+         rencontres culturelles, gastronomie locale et hospitalité font de Bobo-Dioulasso une destination 
+         appréciée pour les visiteurs souhaitant découvrir l'âme du Burkina Faso.
+      </p>
+    </section>
+
+    <aside>
+      <div class="bloc">
+        <h3>Infos pratiques</h3>
+        <p><strong>Localisation :</strong> Hauts-Bassins, Burkina Faso</p>
+        <p><strong>Population :</strong> ~1 000 000 habitants</p>
+        <p><strong>Climat :</strong> Tropical soudanien</p>
+        <p><strong>Langues :</strong> Dioula, Français</p>
+      </div>
+
+      <div class="bloc">
+        <h3>À découvrir</h3>
+        <span class="badge">Artisanat</span>
+        <span class="badge">Musique</span>
+        <span class="badge">Gastronomie</span>
+        <span class="badge">Festivals</span>
+        <span class="badge">Architecture</span>
+        <a class="bouton" href="Patrimoine.html">Voir le patrimoine →</a>
+      </div>
+    </aside>
+
+  </main>
+
+  
+  <footer>
+    
+  
+  <div class="footercontenu">
+    
+    
+    <div class="footercolonne">
+      <h4>Ville de Sya</h4>
+      <p>Découvrez Bobo-Dioulasso, une ville riche de traditions, d'artisanat et d'une hospitalité 
+        légendaire au cœur des Hauts-Bassins.</p>
+    </div>
+    <div class="footercolonne">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index3.html">Accueil</a></li>
+        <li><a href="Patrimoine.html">Patrimoine</a></li>
+        <li><a href="Reservation.html">Réservation d'hôtel</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footercolonne">
+      <h4>Contact Utiles</h4>
+      <ul>
+        <li> Mairie de Bobo-Dioulasso</li>
+        <li>Bureau du Tourisme : +226 20 XX XX XX</li>
+        <li> contact@bobo-tourisme.bf</li>
+        <li> Sécours de police : 17</li>
+
+<li>Événement : Fier d'accueillir la Semaine Nationale de la Culture (SNC).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  
+  <div class="footerbas">
+    <p>© 2026 Site touristique de Bobo-Dioulasso, Burkina Faso. Tous droits réservés.</p>
+  </div>
+</footer>
+  
+
+</body>
+</html>
